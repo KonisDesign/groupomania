@@ -30,7 +30,6 @@ router.get("/byuserId/:id", async (req, res) => {
   res.json(listOfPosts);
 });
 
-//images
 router.put("/:id", validateToken, upload, async (req, res) => {
 
   const postid = req.params.id;
