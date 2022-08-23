@@ -13,8 +13,7 @@ function Home() {
     if (!localStorage.getItem("accessToken")) {
       history.push("/login");
     } else {
-      axios
-        .get("http://localhost:3001/posts", {
+      axios.get("http://localhost:3001/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {
